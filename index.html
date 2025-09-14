@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duyğu Məmmədli — Full Stack Developer Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-primary text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass-effect z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-5xl font-bold">
+            <span class="text-accent"><</span>Duyğu<span class="text-accent">/></span>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home"     class="text-gray-300 text transition-colors font-bold" >Ana Səhifə</a>
+            <a href="#about"    class="text-gray-300 text transition-colors font-bold" >Haqqımda</a>
+            <a href="#skills"   class="text-gray-300 text transition-colors font-bold" >Bacarıqlar</a>
+            <a href="#projects" class="text-gray-300 text transition-colors font-bold">Layihələr</a>
+            <a href="#contact"  class="text-gray-300 text transition-colors font-bold">Əlaqə</a>
+          </div>
+          <button id="menuBtn" class="md:hidden text-2xl text-gray-300 text">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-primary z-40 transform -translate-x-full transition-transform duration-300 md:hidden">
+      <div class="flex flex-col items-center justify-center h-full space-y-8">
+        <a href="#home"     class="text-2xl text-gray-300 text transition-colors mobile-link">Ana Səhifə</a>
+        <a href="#about"    class="text-2xl text-gray-300 text transition-colors mobile-link">Haqqımda</a>
+        <a href="#skills"   class="text-2xl text-gray-300 text transition-colors mobile-link">Bacarıqlar</a>
+        <a href="#projects" class="text-2xl text-gray-300 text transition-colors mobile-link">Layihələr</a>
+        <a href="#contact"  class="text-2xl text-gray-300 text transition-colors mobile-link">Əlaqə</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center justify-center relative overflow-hidden pt-22">
+      <div class="absolute inset-0 opacity-50">
+        <div class="floating absolute top-20 left-10 text-4xl    ">⚡</div>
+        <div class="floating absolute top-40 right-20 text-3xl   " style="animation-delay: 1s">🚀</div>
+        <div class="floating absolute bottom-40 left-20 text-4xl " style="animation-delay: 2s">💻</div>
+        <div class="floating absolute bottom-20 right-10 text-2xl" style="animation-delay: 0.5s">🔥</div>
+      </div>
+
+      <div class="text-center px-6 fade-in relative z-10 max-w-4xl">
+        <div class="mb-8">
+          <div class="w-32 h-32 mx-auto rounded-full glass-effect flex items-center justify-center text-6xl mb-6 glow"> D</div>
+          <p class="text-accent font-semibold text-lg mb-4">Salam, mən</p>
+          </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="text-white">Duyğu Məmmədli</span><br />
+          <span class="text-accent">Full Stack Developer</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl mb-8 typing font-light text-gray-300" id="typingText">
+          HTML • CSS • JavaScript • Vue.js • WordPress
+        </p>
+
+        <p class="text-gray-400 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
+          HTML, CSS, JavaScript, Bootstrap, Tailwind, Pinegrow, Vue.js,
+          WordPress, serverlər və domenlər, Git & GitHub, MySQL, 
+          Figma və Postman ilə işləmə bacarığım var. Full-stack həllər yaradıram.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" >
+          <button class="btn-primary px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 glow" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+            Layihələrə Bax
+          </button>
+          <a href="#contact" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg transition-all" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">CV Yüklə</a>
+        </div>
+
+        <div class="mt-15 flex justify-center space-x-6 ">
+          <a class="w-12 h-12 glass-effect rounded-full flex items-center justify-center bg-accent  transition-all transition-transform transform hover:scale-110" 
+          href="#contact" style="font-size: 30px;">📧</a>
+          <a class="w-12 h-12 glass-effect rounded-full flex items-center justify-center bg-accent  transition-all transition-transform transform hover:scale-110"
+            href="#projects" style="font-size: 25px;">👩‍💻</a>
+          <a class="w-12 h-12 glass-effect rounded-full flex items-center justify-center bg-accent  transition-all transition-transform transform hover:scale-110" 
+          href="#about" style="font-size: 30px;">💼</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+     <section id="about" class="py-22 bg-secondary relative">
+      <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="text-accent">Haqqımda</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Texnologiya həvəskarı və problem həlledici
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="fade-in">
+            <div class="relative">
+              <div
+                class="w-80 h-80 mx-auto glass-effect rounded-3xl flex items-center justify-center text-8xl transform rotate-3 glow">
+                🎯
+              </div>
+              <div
+                class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-full flex items-center justify-center text-xl animate-bounce text-primary font-bold">
+                5+
+              </div>
+              <div
+                class="absolute -bottom-4 -left-4 w-20 h-20 glass-effect rounded-full flex items-center justify-center text-2xl">
+                ⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in">
+            <h3 class="text-3xl font-bold mb-8">
+              Mənim <span class="text-accent">Yolum</span>
+            </h3>
+            <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+              <p>
+                Full Stack Development sahəsində müxtəlif layihələr
+                hazırlamışam. Frontend-dən backend-ə və deployment-ə qədər tam
+                dövriyyəli həllər təqdim edirəm.
+              </p>
+              <p>
+                Layihələrdə istifadə etdiyim əsas texnologiyalar: Frontend: HTML, CSS (Bootstrap/Tailwind), 
+                JavaScript (Vue.js)” və “Backend: PHP (Laravel), Node.js (Express)
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 mt-12">
+              <div class="text-center p-6 glass-effect rounded-2xl">
+                <div class="text-3xl font-bold text-accent mb-2">50+</div>
+                <div class="text-gray-400 font-medium">Layihə</div>
+              </div>
+              <div class="text-center p-6 glass-effect rounded-2xl">
+                <div class="text-3xl font-bold text-accent mb-2">5+</div>
+                <div class="text-gray-400 font-medium">İl Təcrübə</div>
+              </div>
+              <div class="text-center p-6 glass-effect rounded-2xl">
+                <div class="text-3xl font-bold text-accent mb-2">30+</div>
+                <div class="text-gray-400 font-medium">Müştəri</div>
+              </div>
+              <div class="text-center p-6 glass-effect rounded-2xl">
+                <div class="text-3xl font-bold text-accent mb-2">24/7</div>
+                <div class="text-gray-400 font-medium">Dəstək</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+     <section id="skills" class="py-24 bg-primary relative">
+      <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+      <div class=" mx-auto " style="max-width: 1340px;">
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Mənim <span class="text-accent">Bacarıqlarım</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Frontend, Backend, Database və DevOps texnologiyaları
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-16">
+          <!-- Frontend -->
+          <div class="fade-in">
+            <div class="glass-effect p-8 rounded-2xl text-center card-hover h-full">
+              <div class="text-4xl mb-6">🎨</div>
+              <h3 class="text-2xl font-bold mb-6">Frontend</h3>
+              <div class="space-y-4">
+
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>HTML</span>
+                  <span class="text-accent font-semibold">100%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="100%"></div>
+                </div>
+
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>CSS / SCSS</span>
+                  <span class="text-accent font-semibold">95%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                </div>
+
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>JavaScript / Vue</span>
+                  <span class="text-accent font-semibold">95%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="fade-in">
+            <div class="glass-effect p-8 rounded-2xl text-center card-hover h-full">
+              <div class="text-4xl mb-6">⚙️</div>
+              <h3 class="text-2xl font-bold mb-6">Backend</h3>
+
+              <div class="space-y-4">
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>Node.js / Express</span>
+                  <span class="text-accent font-semibold">90%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>WordPress / PHP</span
+                  ><span class="text-accent font-semibold">88%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="88%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>REST/GraphQL API</span>
+                  <span class="text-accent font-semibold">90%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Frameworks -->
+          <div class="fade-in">
+            <div class="glass-effect p-8 rounded-2xl text-center card-hover h-full">
+              <div class="text-4xl mb-6 text-accent">🛠️</div>
+              <h3 class="text-2xl font-bold mb-6">Tools & Frameworks</h3>
+
+              <div class="space-y-4">
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>Bootstrap / Tailwind</span>
+                  <span class="text-accent font-semibold">95%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="95%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>Pinegrow / Figma → HTML</span>
+                  <span class="text-accent font-semibold">85%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="85%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>VS Code / Copilot</span>
+                  <span class="text-accent font-semibold">92%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%"data-width="92%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps & Hosting -->
+          <div class="fade-in">
+            <div class="glass-effect p-8 rounded-2xl text-center card-hover h-full">
+              <div class="text-4xl mb-6 text-accent">🚀</div>
+              <h3 class="text-2xl font-bold mb-6">DevOps & Hosting</h3>
+
+              <div class="space-y-4">
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>AWS / Cloud Hosting</span>
+                  <span class="text-accent font-semibold">88%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                 <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="88%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>VPS / Replit</span>
+                  <span class="text-accent font-semibold">82%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                 <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="82%"></div>
+                </div>
+
+                <div class="flex items-center justify-between text-gray-300">
+                  <span>Docker / Git</span>
+                  <span class="text-accent font-semibold">90%</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-full h-2">
+                  <div class="skill-bar bg-accent h-2 rounded-full" style="width: 0%" data-width="90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stack Icons -->
+        <div class="fade-in">
+          <h3 class="text-3xl font-bold text-center mb-12">
+            Texnoloji <span class="text-accent">Yığın</span>
+          </h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="HTML">HTML</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="CSS">CSS</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="JavaScript">JS</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="Bootstrap">B</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="Tailwind">TW</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="Vue.js">Vue</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="WordPress">WP</div>
+            <div class="tech-icon w-20 h-20 rounded-2xl flex items-center justify-center text-2xl cursor-pointer" title="Pinegrow">Pg</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-secondary relative">
+      <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Mənim <span class="text-accent">Layihələrim</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Full Stack texnologiyalarla hazırladığım real layihələr
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+          <!-- Project 1 -->
+          <div class="glass-effect rounded-3xl overflow-hidden card-hover fade-in">
+            <div class="h-64 bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center text-7xl relative">🛒
+              <div class="absolute top-4 right-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">Featured</div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">E-Commerce Platform</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">
+                HTML, Bootstrap və Vue.js ilə hazırlanmış onlayn mağaza.
+                Real-time inventory və ödəniş inteqrasiyası.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 text-accent rounded-full text-sm font-medium border border-accent">Vue.js</span>
+                <span class="px-3 py-1 text-accent rounded-full text-sm font-medium border border-accent" >Node.js</span>
+                <span class="px-3 py-1 text-accent rounded-full text-sm font-medium border border-accent">MongoDB</span>
+              </div>
+              <div class="flex space-x-4">
+                <button class="flex-1 btn-primary py-3 rounded-xl font-semibold transition-all">Demo</button>
+                <button class="flex-1 btn-secondary py-3 rounded-xl font-semibold transition-all">GitHub</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glass-effect rounded-3xl overflow-hidden card-hover fade-in">
+            <div class="h-64 bg-gradient-to-br from-accent/15 to-accent/5 flex items-center justify-center text-7xl">
+              📊
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Analytics Dashboard</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">
+                Figma dizaynından kodlaşdırılmış Vue.js + Flask dashboard.
+                Interactive charts və API inteqrasiyası.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">Vue.js</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">Python</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">Flask</span>
+              </div>
+              <div class="flex space-x-4">
+                <button class="flex-1 btn-primary py-3 rounded-xl font-semibold transition-all">Demo</button>
+                <button class="flex-1 btn-secondary py-3 rounded-xl font-semibold transition-all">GitHub</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="glass-effect rounded-3xl overflow-hidden card-hover fade-in">
+            <div class="h-64 bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center text-7xl">
+              💬
+            </div>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Real-time Chat App</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">
+                Socket.io və Express.js ilə real-time mesajlaşma tətbiqi. Group
+                chat və file sharing funksiyaları.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">Socket.io</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">Express</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium border border-accent/30">React</span>
+              </div>
+              <div class="flex space-x-4">
+                <button class="flex-1 btn-primary py-3 rounded-xl font-semibold transition-all">Demo</button>
+                <button class="flex-1 btn-secondary py-3 rounded-xl font-semibold transition-all">GitHub</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-primary relative">
+      <div class="section-divider absolute top-0 left-0 right-0"></div>
+
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-20 fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Gəlin <span class="text-accent">Əlaqə Saxlayaq</span>
+          </h2>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+            Layihəniz üçün Full Stack həll lazımdır? Birlikdə işləyək!
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div class="fade-in">
+            <h3 class="text-3xl font-bold mb-8">
+              Mənimlə <span class="text-accent">Əlaqə</span>
+            </h3>
+            <div class="space-y-8">
+              <div class="flex items-center space-x-6">
+                <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-2xl text-primary">
+                  📧
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">Email</h4>
+                  <p class="text-gray-400 text-lg">duygu@example.com</p>
+                </div>
+              </div>
+
+
+              <div class="flex items-center space-x-6">
+                <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-2xl text-primary">
+                  📱
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">Telefon</h4>
+                  <p class="text-gray-400 text-lg">+994 XX XXX XX XX</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-6">
+                <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-2xl text-primary">
+                  📍
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold mb-2">Yer</h4>
+                  <p class="text-gray-400 text-lg">Nakhchivan, Azərbaycan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12">
+              <h4 class="text-xl font-semibold mb-6">
+                Sosial <span class="text-accent">Şəbəkələr</span>
+              </h4>
+              <div class="flex space-x-4">
+                <a class="w-14 h-14 glass-effect tech-icon rounded-2xl transition-all text-xl flex items-center justify-center"  
+                href="#"><i class="fab fa-instagram"></i></a>
+                <a class="w-14 h-14 glass-effect tech-icon rounded-2xl transition-all text-xl flex items-center justify-center"
+                  href="#"><i class="fab fa-github"></i></a>
+                <a class="w-14 h-14 glass-effect tech-icon rounded-2xl transition-all text-xl flex items-center justify-center"
+                  href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="w-14 h-14 glass-effect tech-icon rounded-2xl transition-all text-xl flex items-center justify-center"
+                  href="#"> <i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="fade-in">
+            <form class="glass-effect p-10 rounded-3xl">
+              <div class="mb-8">
+                <label class="block text-white font-semibold mb-3 text-lg">Ad Soyad</label> 
+                <input
+                  type="text"
+                  class="w-full px-6 py-4 bg-primary/50 border border-accent/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-accent transition-colors"
+                  placeholder="Adınızı daxil edin"
+                />
+              </div>
+              <div class="mb-8">
+                <label class="block text-white font-semibold mb-3 text-lg">Email</label> 
+                <input
+                  type="email"
+                  class="w-full px-6 py-4 bg-primary/50 border border-accent/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-accent transition-colors"
+                  placeholder="Email ünvanınızı daxil edin"
+                />
+              </div>
+              <div class="mb-8"><label class="block text-white font-semibold mb-3 text-lg">Layihə Növü</label>
+                <select
+                  class="w-full px-4 py-4 bg-primary/50 border border-accent/30 rounded-2xl text-gray-400  focus:outline-none focus:border-accent transition-colors">
+                  <option>Web Tətbiqi</option>
+                  <option>E-Commerce</option>
+                  <option>API İnkişafı</option>
+                  <option>Mobil Tətbiq</option>
+                  <option>Digər</option>
+                </select>
+              </div>
+              <div class="mb-8">
+                <label class="block text-white font-semibold mb-3 text-lg">Mesaj</label>
+                  <textarea
+                  rows="6"
+                  class="w-full px-6 py-4 bg-primary/50 border border-accent/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-accent transition-colors"
+                  placeholder="Layihəniz haqqında ətraflı məlumat verin..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-primary py-4 rounded-2xl font-semibold text-lg transition-all glow">
+                Mesaj Göndər
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary py-12 border-t border-accent/20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center">
+          <div class="text-3xl font-bold mb-4">
+            <span class="text-accent"><</span>Duyğu<span class="text-accent">/></span>
+          </div>
+          <p class="text-gray-400 mb-6">
+            Full Stack Developer - Modern Web Solutions
+          </p>
+          <div class="flex justify-center space-x-8 mb-8">
+            <a href="#home" class="text-gray-400 text transition-colors">Ana Səhifə</a>
+            <a href="#about" class="text-gray-400 text transition-colors">Haqqımda</a>
+            <a href="#skills" class="text-gray-400 text transition-colors">Bacarıqlar</a>
+            <a href="#projects" class="text-gray-400 text transition-colors">Layihələr</a>
+            <a href="#contact" class="text-gray-400 text transition-colors">Əlaqə</a>
+          </div>
+          <div class="section-divider mb-8"></div>
+          <p class="text-gray-400">
+            © 2025 Duyğu Məmmədli. Bütün hüquqlar qorunur.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
